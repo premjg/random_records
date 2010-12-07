@@ -23,6 +23,6 @@ class ActiveRecord::Base
     highest_possible_offset = [0, total-num].max
     offset = [rand(total), highest_possible_offset].min
     limit = [num, total].min
-    all.offset(options[:offset]).limit(options[:limit])
+    offset(options[:offset]).limit(options[:limit]).all
   end
 end
